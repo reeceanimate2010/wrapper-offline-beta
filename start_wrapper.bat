@@ -39,7 +39,7 @@ if %ADMIN%==n (
 	:: set params= %*
 	:: echo UAC.ShellExecute "cmd.exe", "/c ""%~s0"" %params:"=""%", "", "runas", 1>> %tmp%\requestAdmin.vbs
 	:: start "" %tmp%\requestAdmin.vbs
-	exit /B
+	exit
 )
 :metaavailable
 
