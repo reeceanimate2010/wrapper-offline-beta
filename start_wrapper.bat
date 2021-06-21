@@ -421,7 +421,7 @@ if !FLASH_DETECTED!==n (
 	echo:
 
 	if !BROWSER_TYPE!==chrome (
-		echo Starting the Clean Flash Player installer...
+		echo Starting the Flash Player installer...
 		echo:
 		if not exist "utilities\installers\flash_windows_chromium.msi" (
 			echo ...erm. Bit of an issue there actually. The installer doesn't exist.
@@ -435,7 +435,7 @@ if !FLASH_DETECTED!==n (
 		if !DRYRUN!==n ( start "utilities\installers\flash_windows_chromium.msi" )
 	)
 	if !BROWSER_TYPE!==firefox (
-		echo Starting the Clean Flash Player installer...
+		echo Starting the Flash Player installer...
 		if not exist "utilities\installers\flash_windows_firefox.msi" (
 			echo ...erm. Bit of an issue there actually. The installer doesn't exist.
 			echo A normal copy of Wrapper: Offline should come with one.
