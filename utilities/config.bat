@@ -31,15 +31,8 @@ set BROWSER_TYPE=n
 :: Runs through all of the scripts code, while never launching or installing anything. Useful for development. Default: n
 set DRYRUN=n
 
-:: Makes it so it uses the Cepstral website instead of VFProxy. Default: n
-set CEPSTRAL=n
-
-:: Opens Offline in an included copy of Basilisk, sourced from BlueMaxima's Flashpoint.
-:: Allows continued use of Flash as modern browsers disable it. Default: n
-set INCLUDEDBASILISK=n
-
 :: Makes it so both the settings and the Wrapper launcher shows developer options. Default: n
-set DEVMODE=y
+set DEVMODE=n
 
 :: Tells settings.bat which port the frontend is hosted on. (If changed manually, you MUST also change the value of "SERVER_PORT" to the same value in wrapper\env.json) Default: 4343
 set PORT=4343
