@@ -15468,7 +15468,6 @@
 	<prop id="ncc_02indian_spear.swf" name="Spear" holdable="1" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="Y" aid="11450" money="0" sharing="0" handstyle="stick"/>
 	<prop id="ncc_02musket.swf" name="Musket" holdable="1" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="11884" money="0" sharing="0" handstyle="stick"/>
 	<prop id="flash_light.swf" name="Flash Light" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="3288" money="0" sharing="0"/>
-	<prop id="business_guy.swf" name="Business Guy" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="3199" money="0" sharing="0"/>
 	<prop id="jail_crocroach.swf" name="Cockroach" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="3198" money="0" sharing="0"/>
 	<prop id="jail_prisoner.swf" name="Prisoner" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="3199" money="0" sharing="0"/>
 	<prop id="jail_gatedoor.swf" name="Cell Door" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="3200" money="0" sharing="0"/>
@@ -17701,21 +17700,12 @@
 		<state id="msp_ncc_05musket_ncc_05musket_loop.swf" name="keep shooting" enable="Y"/>
 		<state id="msp_ncc_05musket_ncc_05musket_once.swf" name="shoot once" enable="Y"/>
 	</prop>
-	<sound id="roadSide.swf" name="Rock at the road side" downloadtype="progressive" subtype="bgmusic" duration="39800" enable="Y" is_premium="N" aid="3407" money="0" sharing="0"/>
-	<sound id="rockMain.swf" name="Rock &amp; Roll" downloadtype="progressive" subtype="bgmusic" duration="185000" enable="Y" is_premium="N" aid="3408" money="0" sharing="0"/>
-	<sound id="soft.swf" name="Soft" downloadtype="progressive" subtype="bgmusic" duration="34000" enable="Y" is_premium="N" aid="3409" money="0" sharing="0"/>
-	<sound id="tension builds up.swf" name="Build up tension" downloadtype="progressive" subtype="bgmusic" duration="59000" enable="Y" is_premium="N" aid="3410" money="0" sharing="0"/>
 	<sound id="laugh_4.swf" name="Laugh" downloadtype="embed" subtype="soundeffect" duration="4700" enable="Y" is_premium="N" aid="3411" money="0" sharing="0">
 		<tag>happy</tag>
 		<tag>Human Sounds</tag>
 		<tag>laugh</tag>
 		<tag>people</tag>
 	</sound>
-	<sound id="The_First_Noel.swf" name="The First Noel" downloadtype="progressive" subtype="bgmusic" duration="59400" enable="Y" is_premium="N" aid="3412" money="0" sharing="0"/>
-	<sound id="Action.swf" name="Cinematic" downloadtype="progressive" subtype="bgmusic" duration="14500" enable="Y" is_premium="N" aid="3413" money="0" sharing="0"/>
-	<sound id="Suspense.swf" name="Suspense" downloadtype="progressive" subtype="bgmusic" duration="128500" enable="Y" is_premium="N" aid="3414" money="0" sharing="0"/>
-	<sound id="Romance.swf" name="Romance" downloadtype="progressive" subtype="bgmusic" duration="60000" enable="Y" is_premium="N" aid="3415" money="0" sharing="0"/>
-	<sound id="BroadcastNews.swf" name="Broadcast News" downloadtype="progressive" subtype="bgmusic" duration="37600" enable="Y" is_premium="N" aid="3416" money="0" sharing="0"/>
 	<sound id="FunkyBeat.swf" name="Funky Beat" downloadtype="progressive" subtype="bgmusic" duration="35600" enable="Y" is_premium="N" aid="3417" money="0" sharing="0"/>
 	<sound id="recipe_for_riches.swf" name="Recipe For Riches" downloadtype="progressive" subtype="bgmusic" duration="227500" enable="Y" is_premium="N" aid="3418" money="0" sharing="0"/>
 	<sound id="tibetan_monks.swf" name="Tibetan Monks" downloadtype="progressive" subtype="bgmusic" duration="217400" enable="Y" is_premium="N" aid="3419" money="0" sharing="0"/>
@@ -18416,25 +18406,25 @@
 		<tag>kung fu</tag>
 		<tag>male</tag>
 	</sound>
-	<sound id="strange_human_laff.swf" name="Laugh" downloadtype="embed" subtype="soundeffect" duration="1909" enable="Y" is_premium="N" aid="6776" money="0" sharing="0">
+	<sound id="strange_human_laff.swf" name="Laugh 1" downloadtype="embed" subtype="soundeffect" duration="1909" enable="Y" is_premium="N" aid="6776" money="0" sharing="0">
 		<tag>Coughs, Sighs, Laughs</tag>
 		<tag>Human Sounds</tag>
 		<tag>male</tag>
 		<tag>people</tag>
 	</sound>
-	<sound id="strange_human_laff1.swf" name="Laugh 1" downloadtype="embed" subtype="soundeffect" duration="1125" enable="Y" is_premium="N" aid="6777" money="0" sharing="0">
+	<sound id="strange_human_laff1.swf" name="Laugh 2" downloadtype="embed" subtype="soundeffect" duration="1125" enable="Y" is_premium="N" aid="6777" money="0" sharing="0">
 		<tag>Coughs, Sighs, Laughs</tag>
 		<tag>Human Sounds</tag>
 		<tag>male</tag>
 		<tag>people</tag>
 	</sound>
-	<sound id="strange_human_laff2.swf" name="Laugh 2" downloadtype="embed" subtype="soundeffect" duration="342" enable="Y" is_premium="N" aid="6778" money="0" sharing="0">
+	<sound id="strange_human_laff2.swf" name="Laugh 3" downloadtype="embed" subtype="soundeffect" duration="342" enable="Y" is_premium="N" aid="6778" money="0" sharing="0">
 		<tag>Coughs, Sighs, Laughs</tag>
 		<tag>Human Sounds</tag>
 		<tag>male</tag>
 		<tag>people</tag>
 	</sound>
-	<sound id="strange_human_laff3.swf" name="Laugh 3" downloadtype="embed" subtype="soundeffect" duration="916" enable="Y" is_premium="N" aid="6779" money="0" sharing="0">
+	<sound id="strange_human_laff3.swf" name="Laugh 4" downloadtype="embed" subtype="soundeffect" duration="916" enable="Y" is_premium="N" aid="6779" money="0" sharing="0">
 		<tag>Coughs, Sighs, Laughs</tag>
 		<tag>Human Sounds</tag>
 		<tag>male</tag>
@@ -18606,18 +18596,6 @@
 		<tag>Holidays</tag>
 		<tag>Modern</tag>
 	</sound>
-	<sound id="dance_of_the_sugar_plum_fairy.mp3" name="Dance of the Sugar Plum Fairy" downloadtype="progressive" subtype="bgmusic" duration="60583" enable="Y" is_premium="N" aid="14981" money="0" sharing="0">
-		<tag>Christmas</tag>
-		<tag>Classical</tag>
-		<tag>Holidays</tag>
-	</sound>
-	<sound id="deck_the_hall__jazz_classic_.mp3" name="Deck the Hall (jazz classic)" downloadtype="progressive" subtype="bgmusic" duration="62647" enable="Y" is_premium="N" aid="14982" money="0" sharing="0">
-		<tag>Christmas</tag>
-		<tag>elegant</tag>
-		<tag>Holidays</tag>
-		<tag>lively</tag>
-		<tag>smooth jazz</tag>
-	</sound>
 	<sound id="deck_the_hall__surf_guitar_.mp3" name="Deck the Hall (surf guitar)" downloadtype="progressive" subtype="bgmusic" duration="59930" enable="Y" is_premium="N" aid="14983" money="0" sharing="0">
 		<tag>Christmas</tag>
 		<tag>funny</tag>
@@ -18662,7 +18640,7 @@
 		<tag>holiday</tag>
 		<tag>Modern</tag>
 	</sound>
-	<sound id="jingle_bells.mp3" name="Jingle Bells" downloadtype="progressive" subtype="bgmusic" duration="62543" enable="Y" is_premium="N" aid="14989" money="0" sharing="0">
+	<sound id="jingle_bells.mp3" name="Jingle Bells (jazz)" downloadtype="progressive" subtype="bgmusic" duration="62543" enable="Y" is_premium="N" aid="14989" money="0" sharing="0">
 		<tag>cheerful</tag>
 		<tag>Christmas</tag>
 		<tag>Gentle</tag>
@@ -18710,17 +18688,6 @@
 		<tag>relaxing</tag>
 		<tag>Smooth</tag>
 	</sound>
-	<sound id="silent_night.mp3" name="Silent Night" downloadtype="progressive" subtype="bgmusic" duration="66957" enable="Y" is_premium="N" aid="14995" money="0" sharing="0">
-		<tag>Acoustic</tag>
-		<tag>calming</tag>
-		<tag>Christmas</tag>
-		<tag>classical</tag>
-		<tag>gentle</tag>
-		<tag>holiday</tag>
-		<tag>Holidays</tag>
-		<tag>peaceful</tag>
-		<tag>seasonal</tag>
-	</sound>
 	<sound id="the_twelve_days_of_christmas__jazz_.mp3" name="The Twelve Days of Christmas (jazz)" downloadtype="progressive" subtype="bgmusic" duration="61054" enable="Y" is_premium="N" aid="14996" money="0" sharing="0">
 		<tag>Christmas</tag>
 		<tag>elegant</tag>
@@ -18734,15 +18701,6 @@
 		<tag>Modern</tag>
 		<tag>warm</tag>
 		<tag>whimsical</tag>
-	</sound>
-	<sound id="we_wish_you_a_merry_christmas__jazz_classic_.mp3" name="We Wish You a Merry Christmas (jazz classic)" downloadtype="progressive" subtype="bgmusic" duration="59721" enable="Y" is_premium="N" aid="14998" money="0" sharing="0">
-		<tag>Christmas</tag>
-		<tag>Classical</tag>
-		<tag>classy</tag>
-		<tag>Holidays</tag>
-		<tag>lively</tag>
-		<tag>Magical</tag>
-		<tag>smooth  jazz</tag>
 	</sound>
 	<sound id="we_wish_you_a_merry_christmas__reggae_.mp3" name="We Wish You a Merry Christmas (reggae).mp3" downloadtype="progressive" subtype="bgmusic" duration="60583" enable="Y" is_premium="N" aid="14999" money="0" sharing="0">
 		<tag>Christmas</tag>
@@ -18776,13 +18734,6 @@
 		<tag>soothing</tag>
 		<tag>Wedding</tag>
 	</sound>
-	<sound id="Bossa_Story.mp3" name="Bossa Story" downloadtype="progressive" subtype="bgmusic" duration="60505" enable="Y" is_premium="N" aid="15161" money="0" sharing="0">
-		<tag>cheerful</tag>
-		<tag>cool</tag>
-		<tag>Latin</tag>
-		<tag>Smooth</tag>
-		<tag>World</tag>
-	</sound>
 	<sound id="Busy_Afternoon.mp3" name="Busy Afternoon" downloadtype="progressive" subtype="bgmusic" duration="89031" enable="Y" is_premium="N" aid="15162" money="0" sharing="0">
 		<tag>Comedic</tag>
 		<tag>funny</tag>
@@ -18793,41 +18744,6 @@
 		<tag>elegant</tag>
 		<tag>romantic</tag>
 		<tag>Smooth Jazz</tag>
-	</sound>
-	<sound id="Funky_Mama.mp3" name="Funky Mama" downloadtype="progressive" subtype="bgmusic" duration="62830" enable="Y" is_premium="N" aid="15164" money="0" sharing="0">
-		<tag>Disco</tag>
-		<tag>funky</tag>
-		<tag>Funny</tag>
-		<tag>Groovy</tag>
-		<tag>R and B</tag>
-	</sound>
-	<sound id="Happy_Go_Lucky.mp3" name="Happy Go Lucky" downloadtype="progressive" subtype="bgmusic" duration="67349" enable="Y" is_premium="N" aid="15165" money="0" sharing="0">
-		<tag>Acoustic</tag>
-		<tag>Cartoons</tag>
-		<tag>cheerful</tag>
-		<tag>Folk</tag>
-		<tag>funny</tag>
-		<tag>games</tag>
-		<tag>happy</tag>
-		<tag>Lively</tag>
-		<tag>parties</tag>
-		<tag>sunny</tag>
-	</sound>
-	<sound id="Havana_Moon.mp3" name="Havana Moon" downloadtype="progressive" subtype="bgmusic" duration="69256" enable="Y" is_premium="N" aid="15166" money="0" sharing="0">
-		<tag>Latin</tag>
-		<tag>romantic</tag>
-		<tag>Smooth Jazz</tag>
-		<tag>World</tag>
-	</sound>
-	<sound id="Imagine_Anything.mp3" name="Imagine Anything" downloadtype="progressive" subtype="bgmusic" duration="60139" enable="Y" is_premium="N" aid="15167" money="0" sharing="0">
-		<tag>ambient</tag>
-		<tag>Corporate</tag>
-		<tag>delicate</tag>
-		<tag>Elegant</tag>
-		<tag>gentle</tag>
-		<tag>Inspirational</tag>
-		<tag>Modern</tag>
-		<tag>Wedding</tag>
 	</sound>
 	<sound id="La_Fete_Foraine.mp3" name="La Fete Foraine" downloadtype="progressive" subtype="bgmusic" duration="90363" enable="Y" is_premium="N" aid="15168" money="0" sharing="0">
 		<tag>Happy</tag>
@@ -18851,71 +18767,6 @@
 		<tag>Ballad</tag>
 		<tag>Piano</tag>
 		<tag>Smooth Jazz</tag>
-	</sound>
-	<sound id="Secret_Garden.mp3" name="Secret Garden" downloadtype="progressive" subtype="bgmusic" duration="69674" enable="Y" is_premium="N" aid="15171" money="0" sharing="0">
-		<tag>Acoustic</tag>
-		<tag>Happy</tag>
-		<tag>Piano</tag>
-		<tag>smiling</tag>
-		<tag>sweet</tag>
-	</sound>
-	<sound id="Smile.mp3" name="Smile" downloadtype="progressive" subtype="bgmusic" duration="70223" enable="Y" is_premium="N" aid="15172" money="0" sharing="0">
-		<tag>Acoustic</tag>
-		<tag>Cartoons</tag>
-		<tag>corporate</tag>
-		<tag>folk</tag>
-		<tag>happy</tag>
-		<tag>joyful</tag>
-		<tag>Lively</tag>
-	</sound>
-	<sound id="Smilin_.mp3" name="Smilin'" downloadtype="progressive" subtype="bgmusic" duration="68943" enable="Y" is_premium="N" aid="15173" money="0" sharing="0">
-		<tag>Cartoons</tag>
-		<tag>Corporate</tag>
-		<tag>happy</tag>
-		<tag>Inspirational</tag>
-		<tag>Lively</tag>
-		<tag>Motivational</tag>
-		<tag>playful</tag>
-		<tag>Pop Rock</tag>
-		<tag>Positive</tag>
-		<tag>Soft Rock</tag>
-	</sound>
-	<sound id="Soul_Mate.mp3" name="Soul Mate" downloadtype="progressive" subtype="bgmusic" duration="61524" enable="Y" is_premium="N" aid="15174" money="0" sharing="0">
-		<tag>emotion</tag>
-		<tag>nostalgic</tag>
-		<tag>pop rock</tag>
-		<tag>positive</tag>
-		<tag>Smooth</tag>
-		<tag>Soft Rock</tag>
-	</sound>
-	<sound id="Sunny_Side_Of_The_Road.mp3" name="Sunny Side Of The Road" downloadtype="progressive" subtype="bgmusic" duration="66513" enable="Y" is_premium="N" aid="15175" money="0" sharing="0">
-		<tag>Acoustic</tag>
-		<tag>Corporate</tag>
-		<tag>happy</tag>
-		<tag>Motivational</tag>
-	</sound>
-	<sound id="Turn_Back_Around.mp3" name="Turn Back Around" downloadtype="progressive" subtype="bgmusic" duration="60218" enable="Y" is_premium="N" aid="15176" money="0" sharing="0">
-		<tag>ambient</tag>
-		<tag>quiet</tag>
-		<tag>sentimental</tag>
-		<tag>Soft Rock</tag>
-		<tag>Sweet</tag>
-	</sound>
-	<sound id="Waikiki.mp3" name="Waikiki" downloadtype="progressive" subtype="bgmusic" duration="63065" enable="Y" is_premium="N" aid="15177" money="0" sharing="0">
-		<tag>Ambient</tag>
-		<tag>gentle</tag>
-		<tag>Islands</tag>
-		<tag>Sweet</tag>
-		<tag>World</tag>
-	</sound>
-	<sound id="Yellow_Carousel.mp3" name="Yellow Carousel" downloadtype="progressive" subtype="bgmusic" duration="68368" enable="Y" is_premium="N" aid="15178" money="0" sharing="0">
-		<tag>Cartoons</tag>
-		<tag>Corporate</tag>
-		<tag>Gentle</tag>
-		<tag>happy</tag>
-		<tag>Inspirational</tag>
-		<tag>joyful</tag>
-		<tag>sunny day</tag>
 	</sound>
 	<sound id="Yesterday_s_Tango.mp3" name="Yesterday's Tango" downloadtype="progressive" subtype="bgmusic" duration="77328" enable="Y" is_premium="N" aid="15179" money="0" sharing="0">
 		<tag>dreamy</tag>

@@ -78,42 +78,6 @@ if not exist server ( goto error_location )
 :: Create checks folder if nonexistent
 if not exist "utilities\checks" md utilities\checks
 
-:: Operator, attention!
-if not exist "utilities\checks\disclaimer.txt" (
-	echo DISCLAIMER
-	echo:
-	echo Wrapper: Offline is a project to preserve the original GoAnimate flash-based themes.
-	echo We believe they should be archived for others to use and learn about in the future.
-	echo All business themes have been removed, please use Vyond Studio if you wish to get those.
-	echo This is still unlawful use of copyrighted material, but ^(in our opinion^) morally justifiable use.
-	echo:
-	echo We are not affiliated in any form with Vyond or GoAnimate Inc. We generate no profit from this.
-	echo We do not wish to promote piracy, and we avoid distributing content that is still in use by GoAnimate Inc.
-	echo We have tried to reduce any harm we could do to GoAnimate Inc while making this project.
-	echo:
-	echo Excluding Adobe Flash and GoAnimate Inc's assets, Wrapper: Offline is free/libre software.
-	echo You are free to redistribute and/or modify it under the terms of the MIT ^(aka Expat^) license,
-	echo except for some dependencies which have different licenses with slightly different rights.
-	echo Read the LICENSE file in Offline's base folder and the licenses in utilities/sourcecode for more info.
-	echo:
-	echo By continuing to use Wrapper: Offline, you acknowledge the nature of this project, and your right to use it.
-	echo If you object to any of this, feel free to close Wrapper: Offline now.
-	echo You will be allowed to accept 20 seconds after this message has appeared.
-	echo: 
-	PING -n 21 127.0.0.1>nul
-	echo If you still want to use Wrapper: Offline, press Y. If you no longer want to, press N.
-	:disclaimacceptretry
-	set /p ACCEPTCHOICE= Response:
-	echo:
-	if /i "!acceptchoice!"=="y" goto disclaimaccepted
-	if /i "!acceptchoice!"=="n" exit
-	goto disclaimacceptretry
-	:disclaimaccepted
-	echo: 
-	echo Sorry for all the legalese, let's get back on track.
-	echo You've accepted the disclaimer. To reread it, remove this file. > utilities\checks\disclaimer.txt
-)
-
 :: Welcome, Director Ford!
 echo Wrapper: Offline
 echo A project from VisualPlugin adapted by the W:O team
@@ -393,16 +357,15 @@ if !FLASH_DETECTED!==n (
 	if !BROWSER_TYPE!==n (
 		:: Ask what type of browser is being used.
 		echo What web browser do you use? If it isn't here,
-		echo look up whether it's based on Chromium, Firefox
-		echo or Trident.
+		echo look up whether it's based on Chromium or Firefox
 		echo:
 		echo If it's not based on either, then either
-		echo Wrapper: Offline will not be able to install Flash
-		echo or the Clean Flash Player won't work at all.
+		echo Wrapper: Offline will not be able to install Flash 
+		echo or it will not work properly.
 		echo:
 		echo Unless you know what you're doing and have a
 		echo version of Flash made for your browser, please
-		echo install a Chrome, Firefox or Trident based browser.
+		echo install a Chrome or Firefox based browser.
 		echo:
 		echo ^(NOTE: If it's Chromium-based, make sure the browser
 		echo is based on Chromium 87.0.4280.168 or lower.^)
@@ -412,11 +375,8 @@ if !FLASH_DETECTED!==n (
 		echo Enter 3 for Edge
 		echo Enter 4 for Opera
 		echo Enter 5 for Brave
-		echo Enter 6 for Internet Explorer
-		echo Enter 7 for Maxthon
-		echo Enter 8 for Chrome-based browser
-		echo Enter 9 for Firefox-based browser
-		echo Enter 10 for Trident-based browser
+		echo Enter 6 for Chrome-based browser
+		echo Enter 7 for Firefox-based browser
 		echo Enter 0 for a non-standard browser ^(skips install^)
 		:browser_ask
 		set /p FLASHCHOICE=Response:
@@ -426,11 +386,8 @@ if !FLASH_DETECTED!==n (
 		if "!flashchoice!"=="3" goto chromium_chosen
 		if "!flashchoice!"=="4" goto chromium_chosen
 		if "!flashchoice!"=="5" goto chromium_chosen
-		if "!flashchoice!"=="6" goto trident_chosen
-		if "!flashchoice!"=="7" goto trident_chosen
-		if "!flashchoice!"=="8" goto chromium_chosen
-		if "!flashchoice!"=="9" goto firefox_chosen
-		if "!flashchoice!"=="10" goto trident_chosen
+		if "!flashchoice!"=="6" goto chromium_chosen
+		if "!flashchoice!"=="7" goto firefox_chosen
 		if "!flashchoice!"=="0" echo Flash will not be installed.&& goto after_flash_install
 		echo You must pick a browser.&& goto browser_ask
 
@@ -470,20 +427,20 @@ if !FLASH_DETECTED!==n (
 	if !BROWSER_TYPE!==chrome (
 		echo Starting the Clean Flash Player installer...
 		echo:
-		if not exist "utilities\installers\CleanFlash_34.0.0.155_Installer.exe" (
+		if not exist "utilities\installers\flash_windows_chromium.msi" (
 			echo ...erm. Bit of an issue there actually. The installer doesn't exist.
 			echo A normal copy of Wrapper: Offline should come with one.
 			echo You may be able to get the installer here:
-			echo https://github.com/CleanFlash/installer/releases/tag/v1.1
+			echo 
 			echo Although Flash is needed, Offline will continue launching.
 			pause
 			goto after_flash_install
 		)
-		if !DRYRUN!==n ( start "utilities\runasti\RunAsTI64.exe" "utilities\installers\CleanFlash_34.0.0.155_Installer.exe" )
+		if !DRYRUN!==n ( start "utilities\installers\flash_windows_chromium.msi" )
 	)
 	if !BROWSER_TYPE!==firefox (
 		echo Starting the Clean Flash Player installer...
-		if not exist "utilities\installers\CleanFlash_34.0.0.155_Installer.exe" (
+		if not exist "utilities\installers\flash_windows_firefox.msi" (
 			echo ...erm. Bit of an issue there actually. The installer doesn't exist.
 			echo A normal copy of Wrapper: Offline should come with one.
 			echo You may be able to get the installer here:
@@ -492,20 +449,7 @@ if !FLASH_DETECTED!==n (
 			pause
 			goto after_flash_install
 		)
-		if !DRYRUN!==n ( start "utilities\runasti\RunAsTI64.exe" "utilities\installers\CleanFlash_34.0.0.155_Installer.exe" )
-	)
-	if !BROWSER_TYPE!==trident (
-		echo Starting the Clean Flash Player installer...
-		if not exist "utilities\installers\CleanFlash_34.0.0.155_Installer.exe" (
-			echo ...erm. Bit of an issue there actually. The installer doesn't exist.
-			echo A normal copy of Wrapper: Offline should come with one.
-			echo You may be able to get the installer here:
-			echo https://github.com/CleanFlash/installer/releases/tag/v1.1
-			echo Although Flash is needed, Offline will continue launching.
-			pause
-			goto after_flash_install
-		)
-		if !DRYRUN!==n ( start "utilities\runasti\RunAsTI64.exe" "utilities\installers\CleanFlash_34.0.0.155_Installer.exe" )
+		if !DRYRUN!==n ( start "utilities\installers\flash_windows_firefox.msi" )
 	)
 	echo Flash has been installed.
 	echo:

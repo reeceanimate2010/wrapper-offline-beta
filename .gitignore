@@ -1,7 +1,11 @@
 # General Wrapper Offline Stuff
 Wrapper Offline.lnk
-wrapper/_CACHÉ/*
-wrapper/_SAVED/*
+wrapper/_CACHÉ/*.mp3
+wrapper/_CACHÉ/*.ogg
+wrapper/_CACHÉ/*.png
+wrapper/_CACHÉ/*.xml
+wrapper/_SAVED/*.png
+wrapper/_SAVED/*.xml
 wrapper/_THEMES/import.xml
 wrapper/main.js
 wrapper/main-rpc.js
@@ -34,7 +38,6 @@ server/vo/*
 .DS_Store
 vfproxy/*
 bbbb/*
-
 # Personal Basilisk files
 utilities/basilisk/Basilisk-Portable/User/Basilisk/Profiles/Default/*
 utilities/basilisk/Basilisk-Portable/User/Basilisk/Profiles/Default/compatibility.ini
@@ -167,3 +170,36 @@ wrapper/static/page-debug.js
 wrapper/static/page-nodebug.js
 wrapper/static/page.js
 wrapper/static/watermarkON.txt
+wrapper/node_modules/*
+wrapper/pages/css/create-dark.css
+wrapper/pages/css/create-light.css
+wrapper/pages/css/create-light.css
+wrapper/pages/css/create.css
+wrapper/pages/css/global-light.css
+wrapper/pages/css/global-dark.css
+wrapper/pages/css/global-light.css
+wrapper/pages/css/global.css
+wrapper/pages/css/global.css
+wrapper/pages/css/list-light.css
+wrapper/pages/css/list-dark.css
+wrapper/pages/css/list.css
+wrapper/pages/css/swf-dark.css
+wrapper/pages/css/swf-light.css
+wrapper/pages/css/swf.css
+wrapper/pages/html/importer.html
+wrapper/pages/css/importer.css
+server/animation/414827163ad4eb60/cc_browser.swf
+server/animation/414827163ad4eb60/cc_browser-light.swf
+server/animation/414827163ad4eb60/cc_browser-dark.swf
+server/css/global-dark.css
+server/css/global-light.css
+server/css/global.css
+utilities/config.bat
+server/animation/414827163ad4eb60/cc-dark.swf
+server/animation/414827163ad4eb60/cc-light.swf
+server/animation/414827163ad4eb60/cc.swf
+wrapper/static/page.js
+wrapper/pages/img/importer/Sounds.png
+wrapper/pages/img/importer/ImporterBackground.png
+wrapper/pages/img/importer/Images.png
+utilities/config.bat
