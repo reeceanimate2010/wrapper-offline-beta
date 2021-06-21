@@ -35,10 +35,10 @@ if %NOMETA%==n ( set SUBSCRIPT=y & call utilities\metadata.bat )
 
 :rebootasadmin
 if %ADMIN%==n (
-	echo Set UAC = CreateObject^("Shell.Application"^)>> %tmp%\requestAdmin.vbs
-	set params= %*
-	echo UAC.ShellExecute "cmd.exe", "/c ""%~s0"" %params:"=""%", "", "runas", 1>> %tmp%\requestAdmin.vbs
-	start "" %tmp%\requestAdmin.vbs
+	:: echo Set UAC = CreateObject^("Shell.Application"^)>> %tmp%\requestAdmin.vbs
+	:: set params= %*
+	:: echo UAC.ShellExecute "cmd.exe", "/c ""%~s0"" %params:"=""%", "", "runas", 1>> %tmp%\requestAdmin.vbs
+	:: start "" %tmp%\requestAdmin.vbs
 	exit /B
 )
 :metaavailable
@@ -327,8 +327,8 @@ if !ADMINREQUIRED!==y (
 			)
 			echo To do this, it must be started with Admin rights.
 			echo:
-			echo Press any key to restart this window and accept
-			echo any admin prompts that pop up.
+			echo Close this window and re-open Wrapper: Offline as an Admin.
+			echo ^(right-click start_wrapper.bat and click "Run as Administrator"^)
 			echo:
 			if !DRYRUN!==y (
 				echo ...yep, dry run is going great so far, let's skip the exit
@@ -432,7 +432,7 @@ if !FLASH_DETECTED!==n (
 			pause
 			goto after_flash_install
 		)
-		if !DRYRUN!==n ( start "utilities\installers\flash_windows_chromium.msi" )
+		if !DRYRUN!==n ( msiexec /i "utilities\installers\flash_windows_chromium.msi" !INSTALL_FLAGS! /quiet )
 	)
 	if !BROWSER_TYPE!==firefox (
 		echo Starting the Flash Player installer...
@@ -440,12 +440,12 @@ if !FLASH_DETECTED!==n (
 			echo ...erm. Bit of an issue there actually. The installer doesn't exist.
 			echo A normal copy of Wrapper: Offline should come with one.
 			echo You may be able to get the installer here:
-			echo https://github.com/CleanFlash/installer/releases/tag/v1.1
+	s		echo https://github.com/CleanFlash/installer/releases/tag/v1.1
 			echo Although Flash is needed, Offline will continue launching.
 			pause
 			goto after_flash_install
 		)
-		if !DRYRUN!==n ( start "utilities\installers\flash_windows_firefox.msi" )
+		if !DRYRUN!==n ( msiexec /i "utilities\installers\flash_windows_firefox.msi" !INSTALL_FLAGS! /quiet )
 	)
 	echo Flash has been installed.
 	echo:
