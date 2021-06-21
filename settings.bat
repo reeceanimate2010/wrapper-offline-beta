@@ -49,8 +49,6 @@ set TMPCFG=utilities\tempconfig.bat
 set META=utilities\metadata.bat
 set ENV=wrapper\env.json
 set BACKTODEFAULTTOGGLE=n
-set BASILISKENABLE=n
-set BASILISKDISABLE=n
 set CHROMIUMENABLE=n
 set CHROMIUMDISABLE=n
 set BACKTOCUSTOMTOGGLE=n
@@ -100,18 +98,13 @@ if !INCLUDEDCHROMIUM!==y (
 	)
 	goto postbrowsershow
 )
-if !INCLUDEDBASILISK!==y (
-	echo ^(2^) Browser set to[92m included Basilisk [0m
-)
 if not !CUSTOMBROWSER!==n (
 	echo ^(2^) Browser set to[91m custom browser [0m
 	echo     ^(3^) Browser path: !CUSTOMBROWSER!
 )
 if !INCLUDEDCHROMIUM!==n (
-	if !INCLUDEDBASILISK!==n (
-		if !CUSTOMBROWSER!==n (
-			echo ^(2^) Browser set to[91m default system browser [0m
-		)
+	if !CUSTOMBROWSER!==n (
+		echo ^(2^) Browser set to[91m default system browser [0m
 	)
 )
 :postbrowsershow
@@ -185,19 +178,19 @@ if exist "wrapper\tts\info-cepstral.json" (
 )
 :: Developer mode
 if !DEVMODE!==y (
-	echo ^(14^) Developer mode is[92m ON [0m
+	echo ^(12^) Developer mode is[92m ON [0m
 ) else ( 
-	echo ^(14^) Developer mode is[91m OFF [0m
+	echo ^(12^) Developer mode is[91m OFF [0m
 )
 :: Auto restarting NPM
 if !AUTONODE!==y (
-	echo ^(15^) Auto-restarting NPM is[92m ON [0m
+	echo ^(13^) Auto-restarting NPM is[92m ON [0m
 ) else ( 
-	echo ^(15^) Auto-restarting NPM is[91m OFF [0m
+	echo ^(13^) Auto-restarting NPM is[91m OFF [0m
 )
 :: Character solid archive
 if exist "server\characters\characters.zip" (
-    echo ^(16^) Original LVM character IDs are[91m OFF [0m
+    echo ^(14^) Original LVM character IDs are[91m OFF [0m
 )
 
 if !DEVMODE!==y (
@@ -260,7 +253,7 @@ if "!choice!"=="?1" (
 :: Browser settings
 if "!choice!"=="2" goto browsertype
 if "!choice!"=="?2" (
-	echo When set to included Chromium ^(or Basilisk^), it opens a browser that comes with Offline.
+	echo When set to included Chromium, it opens a browser that comes with Offline.
 	echo This older browser will keep running Flash after new browsers block it completely.
 	echo If you don't want to use it, you can use your default browser, or a specific executable.
 	echo Default setting is included Chromium. Most should probably keep that default.
@@ -617,8 +610,6 @@ del !tmpcfg!
 :: Set in here for displaying
 set !totoggle!=!toggleto!
 if !BACKTODEFAULTTOGGLE!==y goto backtodefault
-if !BASILISKENABLE!==y goto enablebasilisk
-if !BASILISKDISABLE!==y goto disablebasilisk
 if !BACKTOCUSTOMTOGGLE!==y goto backtocustom
 if !BACKTOCUSTOMTOGGLE2!==y goto backtocustom2
 goto optionscreen
@@ -636,9 +627,8 @@ echo will not load any Flash content and will instead show
 echo the "f(i)" icon.
 echo:
 echo Press 1 to use Offline's included Chromium (recommended)
-echo Press 2 to use Offline's included Basilisk
-echo Press 3 to use your default browser set in Windows
-echo Press 4 to use a specific browser of your choice
+echo Press 2 to use your default browser set in Windows
+echo Press 3 to use a specific browser of your choice
 echo Press 0 to cancel changing
 echo:
 :browserreask
@@ -652,33 +642,12 @@ if /i "!browserchoice!"=="1" (
 	goto toggleoption
 )
 if /i "!browserchoice!"=="2" (
-    set BASILISKENABLE=y
-	set TOTOGGLE=INCLUDEDCHROMIUM
-	set TOGGLETO=n
-	set CFGLINE=20
-	goto toggleoption
-)
-if /i "!browserchoice!"=="3" (
 	set BACKTODEFAULTTOGGLE=y
-	set BASILISKDISABLE=y
 	set TOTOGGLE=INCLUDEDCHROMIUM
 	set TOGGLETO=n
 	set CFGLINE=20
-	goto toggleoption
-	:enablebasilisk
-	set BASILISKENABLE=n
-	set TOTOGGLE=INCLUDEDBASILISK
-	set TOGGLETO=y
-	set CFGLINE=39
-	goto toggleoption
-	:disablebasilisk
-	set BASILISKDISABLE=n
-	set TOTOGGLE=INCLUDEDBASILISK
-	set TOGGLETO=n
-	set CFGLINE=39
 	goto toggleoption
 	:enablechromium
-	if !INCLUDEDBASILISK!==y ( set BASILISKDISABLE=y )
 	set CHROMIUMENABLE=n
 	set TOTOGGLE=INCLUDEDCHROMIUM
 	set TOGGLETO=y
@@ -697,7 +666,7 @@ if /i "!browserchoice!"=="3" (
 	set CFGLINE=30
 	goto toggleoption
 )
-if /i "!browserchoice!"=="4" goto setcustombrowser
+if /i "!browserchoice!"=="3" goto setcustombrowser
 echo You must answer what browser. && goto browserreask
 
 :::::::::::::::::::::::::
@@ -737,17 +706,6 @@ for %%a in (!TOGGLETO!) do (
 	if !cbname!==firefox set TOGGLETO=firefox
 	if !cbname!==palemoon set TOGGLETO=firefox
 	if !cbname!==tor set TOGGLETO=firefox
-	if !cbname!==Basilisk-Portable set TOGGLETO=firefox
-	if !cbname!==basilisk set TOGGLETO=firefox
-	:: Trident-based
-	if !cbname!==iexplore ( 
-		if not exist "%tmp%\flashpatchocxWO.txt" ( goto runflashpatch )
-		set TOGGLETO=trident
-	)
-	if !cbname!==maxthon ( 
-		if not exist "%tmp%\flashpatchocxWO.txt" ( goto runflashpatch )
-		set TOGGLETO=trident
-	)
 	:: Stupid
 	if !cbname!==netscape echo go back to 1996 & set TOGGLETO=n
 	:: Unknown
@@ -756,39 +714,6 @@ for %%a in (!TOGGLETO!) do (
 set TOTOGGLE=BROWSER_TYPE
 set CFGLINE=33
 goto toggleoption
-
-:: Run FlashPatch if the browser chosen is Trident-based
-:runflashpatch
-echo Before we change your browser to this Trident-based browser,
-echo since it pulls from whichever ActiveX version of Flash Player
-echo is included with Internet Explorer, it's required that you run
-echo FlashPatch to get rid of the timebomb on the ActiveX version of
-echo Flash Player that IE depends on.
-echo ^(This will only be required once.^)
-echo:
-net session >nul 2>&1
-if %errorLevel% == 0 (
-	echo It looks like you're running this as admin, so you're good to go.
-	echo:
-	pause
-	echo:
-	echo Opening FlashPatch...
-	start utilities\FlashPatch.exe
-	PING -n 4 127.0.0.1>nul
-	echo Started FlashPatch^^!
-	echo:
-	pause
-	echo FlashPatch was already run.>%tmp%\flashpatchocxWO.txt
-) else (
-	echo However, in order to go through this process, you MUST run
-	echo this batch file with administrator privileges in order for it
-	echo to work.
-	echo:
-	echo The Wrapper: Offline settings will now close so that you can
-	echo reopen this as admin.
-	echo:
-	pause & exit
-)
 
 :: Turn off included Chromium
 :backtocustom2
@@ -804,8 +729,7 @@ echo:
 echo:
 echo Press 1 for Chrome
 echo Press 2 for Firefox
-echo Press 3 for Trident
-echo Press 4 for Unknown
+echo Press 3 for Unknown
 echo Press 0 to cancel changing
 echo:
 :browsertypereask
@@ -814,8 +738,7 @@ echo:
 if /i "!typechoice!"=="0" goto end
 if /i "!typechoice!"=="1" set TOGGLETO=chrome
 if /i "!typechoice!"=="2" set TOGGLETO=firefox
-if /i "!typechoice!"=="3" set TOGGLETO=trident
-if /i "!typechoice!"=="4" set TOGGLETO=n
+if /i "!typechoice!"=="3" set TOGGLETO=n
 echo You must answer with a browser type. && goto browsertypereask
 set TOTOGGLE=BROWSER_TYPE
 set CFGLINE=33
@@ -1135,56 +1058,6 @@ if exist "create-allthemes.html" (
 popd
 goto optionscreen
 
-:::::::::::::::
-:: Cepstral  ::
-:::::::::::::::
-:cepstralchange
-echo Toggling setting...
-pushd wrapper\tts
-if exist "info-cepstral.json" (
-	:: disable
-	ren info.json info-vfproxy.json
-	ren info-cepstral.json info.json
-) else ( 
-	:: enable
-	ren info.json info-cepstral.json
-	ren info-vfproxy.json info.json
-)
-popd
-set TOTOGGLE=CEPSTRAL
-if !CEPSTRAL!==n (
-	set TOGGLETO=y
-) else (
-	set TOGGLETO=n
-)
-set CFGLINE=35
-goto toggleoption
-
-:::::::::::::::
-:: Cepstral  ::
-:::::::::::::::
-:vfproxyserverchange
-echo Toggling setting...
-pushd wrapper\tts
-if exist "main-seamus.js" (
-	:: disable
-	ren load.js load-localvfproxy.js
-	ren main-seamus.js load.js
-) else ( 
-	:: enable
-	ren load.js main-seamus.js
-	ren load-localvfproxy.js load.js
-)
-popd
-set TOTOGGLE=CEPSTRAL
-if !CEPSTRAL!==n (
-	set TOGGLETO=y
-) else (
-	set TOGGLETO=n
-)
-set CFGLINE=35
-goto toggleoption
-
 ::::::::::::::::
 :: Watermarks ::
 ::::::::::::::::
@@ -1287,10 +1160,6 @@ echo:>> !cfg!
 echo :: Makes it so it uses the Cepstral website instead of VFProxy. Default: n>> !cfg!
 echo set CEPSTRAL=n>> !cfg!
 echo:>> !cfg!
-echo :: Opens Offline in an included copy of Basilisk, sourced from BlueMaxima's Flashpoint.>> !cfg!
-echo :: Allows continued use of Flash as modern browsers disable it. Default: n>> !cfg!
-echo set INCLUDEDBASILISK=n>> !cfg!
-echo:>> !cfg!
 echo :: Makes it so both the settings and the Wrapper launcher shows developer options. Default: n>> !cfg!
 echo set DEVMODE=n>> !cfg!
 echo:>> !cfg!
@@ -1314,7 +1183,7 @@ cls
 		echo Press 2 if you would like to export settings.
 		echo:
 		:settinginexretry
-		set /p SETTINGSRES= Response:
+		set /p settingsres= Response: 
 		if "!settingsres!"=="1" (
 			echo How would you like to import the settings file?
 			echo:
