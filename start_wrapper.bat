@@ -80,7 +80,7 @@ if not exist "utilities\checks" md utilities\checks
 
 :: Welcome, Director Ford!
 echo Wrapper: Offline
-echo A project from VisualPlugin adapted by the W:O team
+echo A project from VisualPlugin, adapted by the W:O development team and directed by GoTest334.
 echo Version !WRAPPER_VER!, build !WRAPPER_BLD!
 echo:
 
