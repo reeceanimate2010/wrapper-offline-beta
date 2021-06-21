@@ -267,45 +267,11 @@ echo Otherwise, press 0 if your video is meant to be standard.
 echo:
 set /p ISWIDE= Is Wide?:
 echo:
-echo Which browser do you want to use for the process?
-echo:
-echo Press 1 for Basilisk
-echo Press 2 for Chromium
-echo Press 3 for your custom set browser ^(Must be specified in settings.bat^)
-echo Press 4 for your default browser
-:BrowserSelect
-set /p BROWSERCHOICE= Browser:
-echo:
-if "%BROWSERCHOICE%"=="1" (
-	echo Opening your movie in Basilisk...
-	PING -n 2.5 127.0.0.1>nul
-	start basilisk\Basilisk-Portable\Basilisk-Portable.exe "http://localhost:%PORT%/recordWindow?movieId=%MOVIEID%&isWide=%ISWIDE%"
-) else if "%BROWSERCHOICE%"=="2" (
-	echo Opening your movie in Chromium...
-	PING -n 2.5 127.0.0.1>nul
-	start ungoogled-chromium\chromium.exe --allow-outdated-plugins --app="http://localhost:%PORT%/recordWindow?movieId=%MOVIEID%&isWide=%ISWIDE%"
-) else if "%BROWSERCHOICE%"=="3" (
-	echo Opening your movie in your custom set browser...
-	PING -n 2.5 127.0.0.1>nul
-	start %CUSTOMBROWSER% "http://localhost:%PORT%/recordWindow?movieId=%MOVIEID%&isWide=%ISWIDE%"
-) else if "%BROWSERCHOICE%"=="4" (
-	echo Opening your movie in your default browser...
-	PING -n 2.5 127.0.0.1>nul
-	start "" "http://localhost:%PORT%/recordWindow?movieId=%MOVIEID%&isWide=%ISWIDE%"
-) else (
-	echo You're supposed to pick which browser to use. Try again.
-	echo:
-	goto BrowserSelect
-)
-
-echo:
+echo Opening your movie in Chromium...
+PING -n 2.5 127.0.0.1>nul
+start ungoogled-chromium\chromium.exe --allow-outdated-plugins --kiosk --app="http://localhost:%PORT%/recordWindow?movieId=%MOVIEID%&isWide=%ISWIDE%"
 taskkill /f /im avidemux.exe >nul 2>&1
 cls
-echo As you can see, the movie won't play right away. That's normal.
-echo:
-echo Press Enter in this box and hit play on the video player whenever
-echo you're ready. It will open the FFMPEG screen recording CLI.
-echo:
 echo When you're done recording, press any key in this window to stop
 echo recording your video. Alternatively, press Q in the FFMPEG
 echo window to also stop recording.
