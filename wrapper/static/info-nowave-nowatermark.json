@@ -99,6 +99,11 @@
             "headers": {
                 "Content-Type": "text/javascript; charset=UTF-8"
             }
+        },
+		"pages/php/(.*)(js|PHP)$": {
+            "headers": {
+                "Content-Type": "text/html; charset=UTF-8"
+            }
         }
 	},
 	"POST": {
@@ -151,6 +156,18 @@
 			"content": "{\"status\":\"ok\",\"data\":[]}"
 		},
 		"/api_v2/text_component/add": {
+			"headers": {
+				"Content-Type": "application/json"
+			},
+			"content": "{\"status\":\"ok\",\"data\":[]}"
+		},
+		"/api_v2/assets/team": {
+			"headers": {
+				"Content-Type": "application/json"
+			},
+			"content": "{\"status\":\"ok\",\"data\":[]}"
+		},
+		"/api_v2/assets/shared": {
 			"headers": {
 				"Content-Type": "application/json"
 			},
