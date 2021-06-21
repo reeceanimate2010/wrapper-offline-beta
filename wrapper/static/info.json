@@ -127,9 +127,9 @@
 		},
 		"/api_v2/asset/get": {
 			"headers": {
-				"Content-Type": "text/html; charset=UTF-8"
+				"Content-Type": "application/json"
 			},
-			"content": "1"
+			"content": "{\"status\":\"forbidden\"}"
 		},
 		"/goapi/rebuildTTS/": {
 			"headers": {
@@ -172,6 +172,11 @@
 				"Content-Type": "application/json"
 			},
 			"content": "{\"status\":\"ok\",\"data\":[]}"
+		},
+		"/pages/html/list.html": {
+			"headers": {
+				"Location": "/pages/html/list.html"
+			}
 		}
 	},
 	"pages": {
