@@ -176,8 +176,6 @@ if !DEVMODE!==y (
 	) else ( 
 		echo ^(D3^) Localhost port for Wrapper: Offline frontend is[91m !PORT! [0m
 	)
-	echo ^(D4^) Reset all the settings in config.bat back to default
-	echo ^(D5^) Import/export config.bat settings
 )
 :reaskoptionscreen
 echo:
