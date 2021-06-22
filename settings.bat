@@ -102,9 +102,9 @@ if exist "wrapper\static\info-nowave*.json" (
 )
 :: Debug mode
 if exist "wrapper\static\page-nodebug.js" (
-	echo ^(4^) Debug mode is[92m ON [0m
+	echo ^(4^) Debug videomaker is[92m ON [0m
 ) else ( 
-	echo ^(4^) Debug mode is[91m OFF [0m
+	echo ^(4^) Debug videomaker is[91m OFF [0m
 )
 :: Dark mode
 if exist "wrapper\pages\css\global-light.css" (
@@ -147,15 +147,9 @@ if !DEVMODE!==y (
 ) else ( 
 	echo ^(10^) Developer mode is[91m OFF [0m
 )
-:: Auto restarting NPM
-if !AUTONODE!==y (
-	echo ^(11^) Auto-restarting NPM is[92m ON [0m
-) else ( 
-	echo ^(11^) Auto-restarting NPM is[91m OFF [0m
-)
 :: Character solid archive
 if exist "server\characters\characters.zip" (
-    echo ^(12^) Original LVM character IDs are[91m OFF [0m
+    echo ^(11^) Original LVM character IDs are[91m OFF [0m
 )
 
 if !DEVMODE!==y (
@@ -343,30 +337,11 @@ if "!choice!"=="?10" (
 	echo The developer settings will be visible both in these settings and in the Wrapper launcher.
 	goto reaskoptionscreen
 )
-:: Auto restarting NPM
-if "!choice!"=="11" (
-	set TOTOGGLE=AUTONODE
-	if !AUTONODE!==n (
-		set TOGGLETO=y
-	) else (
-		set TOGGLETO=n
-	)
-	set CFGLINE=48
-	goto toggleoption
-)
 
-if "!choice!"=="?11" (
-	echo By default, when the NPM crashes, an error message appears in the 
-	echo NPM window requiring a key input to restart it.
-        echo:
-	echo Enabling this feature skips the error message and pause completely,
-	echo restarting the NPM as soon as it crashes.
-	goto reaskoptionscreen
-)
 :: Character solid archive
 if exist "server\characters\characters.zip" (
-    if "!choice!"=="12" goto extractchars
-    if "!choice!"=="?12" (
+    if "!choice!"=="11" goto extractchars
+    if "!choice!"=="?11" (
         echo When first getting Wrapper: Offline, all non-stock characters are put into a single zip file.
         echo This is because if they're all separate, extracting takes forever and is incredibly annoying.
         echo If you wish to import characters made on the LVM when it was still up and hosted by Vyond,
@@ -432,21 +407,7 @@ if !DEVMODE!==y (
 		echo Toggling this feature will allow you to change the port number that
 		echo the frontend is on.
 		goto reaskoptionscreen
-	)
-	if /i "!choice!"=="D4" goto resetconfig
-	if /i "!choice!"=="?D4" (
-		echo Something could happen to config.bat which could totally screw
-		echo the settings up.
-		echo:
-		echo Choosing this feature will COMPLETELY reset the settings that are
-		echo in config.bat back to the default values.
-		echo:
-		echo This is not recommended unless either a dev is using this to
-		echo reset it before publishing an update, config.bat went missing
-		echo on your copy or something weird happened that messed up the
-		echo code for config.bat.
-		goto reaskoptionscreen
-	)		
+	)	
 )
 if "!choice!"=="clr" goto optionscreen
 if "!choice!"=="cls" goto optionscreen
@@ -503,7 +464,7 @@ if /i "!portchoice!"=="1" (
 )
 if /i "!portchoice!"=="2" (
 	echo Which port would you like the frontend to be hosted on?
-	echo:
+	echo:`
 	set /p PORTNUMBER= Port: 
 	goto porttoggle
 )
@@ -831,72 +792,6 @@ if exist "info-nowatermark.json" (
 popd
 goto optionscreen
 
-::::::::::::::::::
-:: Reset Config ::
-::::::::::::::::::
-:resetconfig
-echo This will COMPLETELY reset all the important settings back to the default.
-echo:
-echo Your settings will be located in the WrapperOffline
-echo folder in Documents if you choose to backup the
-echo settings.
-echo:
-echo This will not affect things like debug mode,
-echo dark mode, waveforms, watermarks or things like that.
-echo:
-echo Would you like to backup your settings?
-echo:
-echo Press 1 if you'd like to.
-echo Otherwise, press Enter.
-echo:
-set /p BACKUPCONFIGRES= Response:
-if "!backupconfigres!"=="1" (
-	if exist "!onedrive!" ( 
-		set DOCUMENTSPATH=!onedrive!\Documents
-	) else (
-		set DOCUMENTSPATH=!userprofile!\Documents
-	)
-	pushd !documentspath!
-	if not exist "WrapperOffline" ( mkdir WrapperOffline )
-	popd
-	copy "!cfg!" "!documentspath!\WrapperOffline\config_backup.bat" /y
-)
-echo:
-echo Resetting settings...
-PING -n 4 127.0.0.1>nul
-del !cfg!
-echo :: Wrapper: Offline Config>> !cfg!
-echo :: This file is modified by settings.bat. It is not organized, but comments for each setting have been added.>> !cfg!
-echo :: You should be using settings.bat, and not touching this. Offline relies on this file remaining consistent, and it's easy to mess that up.>> !cfg!
-echo:>> !cfg!
-echo :: Opens this file in Notepad when run>> !cfg!
-echo setlocal>> !cfg!
-echo if "%%SUBSCRIPT%%"=="" ( start notepad.exe "%%CD%%\%%~nx0" ^& exit )>> !cfg!
-echo endlocal>> !cfg!
-echo:>> !cfg!
-echo :: Shows exactly Offline is doing, and never clears the screen. Useful for development and troubleshooting. Default: n>> !cfg!
-echo set VERBOSEWRAPPER=n>> !cfg!
-echo:>> !cfg!
-echo :: Won't check for dependencies (flash, node, etc) and goes straight to launching. Useful for speedy launching post-install. Default: n>> !cfg!
-echo set SKIPCHECKDEPENDS=n>> !cfg!
-echo:>> !cfg!
-echo :: Won't install dependencies, regardless of check results. Overridden by SKIPCHECKDEPENDS. Mostly useless, why did I add this again? Default: n>> !cfg!
-echo set SKIPDEPENDINSTALL=n>> !cfg!
-echo:>> !cfg!
-echo :: Runs through all of the scripts code, while never launching or installing anything. Useful for development. Default: n>> !cfg!
-echo set DRYRUN=n>> !cfg!
-echo:>> !cfg!
-echo :: Makes it so both the settings and the Wrapper launcher shows developer options. Default: n>> !cfg!
-echo set DEVMODE=n>> !cfg!
-echo:>> !cfg!
-echo :: Tells settings.bat which port the frontend is hosted on. ^(If changed manually, you MUST also change the value of "SERVER_PORT" to the same value in wrapper\env.json^) Default: 4343>> !cfg!
-echo set PORT=4343>> !cfg!
-echo:>> !cfg!
-echo :: Automatically restarts the NPM whenever it crashes. Default: y>> !cfg!
-echo set AUTONODE=y>> !cfg!
-echo:>> !cfg!
-cls
-%0
 :end
 endlocal
 if "%SUBSCRIPT%"=="" (
