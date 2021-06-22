@@ -189,7 +189,7 @@ if "!choice!"=="1" (
 	) else (
 		set TOGGLETO=n
 	)
-	set CFGLINE=11
+	set CFGLINE=5
 	goto toggleoption
 )
 if "!choice!"=="?1" (
@@ -206,7 +206,7 @@ if "!choice!"=="2" (
 	) else (
 		set TOGGLETO=n
 	)
-	set CFGLINE=14
+	set CFGLINE=6
 	goto toggleoption
 )
 if "!choice!"=="?2" (
@@ -323,7 +323,7 @@ if "!choice!"=="10" (
 	) else (
 		set TOGGLETO=n
 	)
-	set CFGLINE=42
+	set CFGLINE=8
 	goto toggleoption
 )
 if "!choice!"=="?10" (
@@ -371,7 +371,7 @@ if !DEVMODE!==y (
 		) else (
 			set TOGGLETO=n
 		)
-		set CFGLINE=17
+		set CFGLINE=7
 		goto toggleoption
 	)
 	if /i "!choice!"=="?D1" (
@@ -386,7 +386,7 @@ if !DEVMODE!==y (
 		) else (
 			set TOGGLETO=n
 		)
-		set CFGLINE=32
+		set CFGLINE=9
 		goto toggleoption
 	)
 	if /i "!choice!"=="?D2" (
