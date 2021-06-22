@@ -17962,14 +17962,14 @@
 		<tag>rock</tag>
 		<tag>Smooth</tag>
 	</sound>
-	<sound id="FunkyBeat.mp3" name="Funky Beat" downloadtype="progressive" subtype="tribeofnoise" duration="35600" enable="Y" is_premium="N" aid="6046" money="0" sharing="0"/>
-	<sound id="recipe_for_riches.mp3" name="Recipe For Riches" downloadtype="progressive" subtype="tribeofnoise" duration="227500" enable="Y" is_premium="N" aid="6047" money="0" sharing="0"/>
-	<sound id="tibetan_monks.mp3" name="Tibetan Monks" downloadtype="progressive" subtype="tribeofnoise" duration="217400" enable="Y" is_premium="N" aid="6048" money="0" sharing="0"/>
-	<sound id="swimming.mp3" name="Swimming" downloadtype="progressive" subtype="tribeofnoise" duration="301400" enable="Y" is_premium="N" aid="6049" money="0" sharing="0"/>
-	<sound id="salient.mp3" name="Salient" downloadtype="progressive" subtype="tribeofnoise" duration="297000" enable="Y" is_premium="N" aid="6050" money="0" sharing="0"/>
-	<sound id="smell_isnt_everything.mp3" name="Smell Isn't Everything" downloadtype="progressive" subtype="tribeofnoise" duration="134300" enable="Y" is_premium="N" aid="6051" money="0" sharing="0"/>
-	<sound id="peace_on_earth.mp3" name="Peace On Earth" downloadtype="progressive" subtype="tribeofnoise" duration="229600" enable="Y" is_premium="N" aid="6052" money="0" sharing="0"/>
-	<sound id="buzzin.mp3" name="Buzzin'" downloadtype="progressive" subtype="tribeofnoise" duration="70600" enable="Y" is_premium="N" aid="6053" money="0" sharing="0"/>
+	<sound id="FunkyBeat.mp3" name="Funky Beat" downloadtype="progressive" subtype="bgmusic" duration="35600" enable="Y" is_premium="N" aid="6046" money="0" sharing="0"/>
+	<sound id="recipe_for_riches.mp3" name="Recipe For Riches" downloadtype="progressive" subtype="bgmusic" duration="227500" enable="Y" is_premium="N" aid="6047" money="0" sharing="0"/>
+	<sound id="tibetan_monks.mp3" name="Tibetan Monks" downloadtype="progressive" subtype="bgmusic" duration="217400" enable="Y" is_premium="N" aid="6048" money="0" sharing="0"/>
+	<sound id="swimming.mp3" name="Swimming" downloadtype="progressive" subtype="bgmusic" duration="301400" enable="Y" is_premium="N" aid="6049" money="0" sharing="0"/>
+	<sound id="salient.mp3" name="Salient" downloadtype="progressive" subtype="bgmusic" duration="297000" enable="Y" is_premium="N" aid="6050" money="0" sharing="0"/>
+	<sound id="smell_isnt_everything.mp3" name="Smell Isn't Everything" downloadtype="progressive" subtype="bgmusic" duration="134300" enable="Y" is_premium="N" aid="6051" money="0" sharing="0"/>
+	<sound id="peace_on_earth.mp3" name="Peace On Earth" downloadtype="progressive" subtype="bgmusic" duration="229600" enable="Y" is_premium="N" aid="6052" money="0" sharing="0"/>
+	<sound id="buzzin.mp3" name="Buzzin'" downloadtype="progressive" subtype="bgmusic" duration="70600" enable="Y" is_premium="N" aid="6053" money="0" sharing="0"/>
 	<sound id="approved_weird_buzzer.swf" name="Buzzer" downloadtype="embed" subtype="soundeffect" duration="838" enable="Y" is_premium="N" aid="6685" money="0" sharing="0">
 		<tag>Various Foley</tag>
 	</sound>
@@ -18523,49 +18523,49 @@
 		<tag>happy</tag>
 		<tag>joyful</tag>
 	</sound>
-	<sound id="Deep_Blue.mp3" name="Deep Blue" downloadtype="progressive" subtype="tribeofnoise" duration="91799" enable="Y" is_premium="N" aid="11077" money="0" sharing="0"/>
-	<sound id="Deep_Sea_Green.mp3" name="Deep Sea Greeb" downloadtype="progressive" subtype="tribeofnoise" duration="277308" enable="Y" is_premium="N" aid="11078" money="0" sharing="0"/>
-	<sound id="Doorway.mp3" name="Doorway" downloadtype="progressive" subtype="tribeofnoise" duration="210621" enable="Y" is_premium="N" aid="11079" money="0" sharing="0"/>
-	<sound id="Everybody_Sleeps.mp3" name="Everybody Sleeps" downloadtype="progressive" subtype="tribeofnoise" duration="187492" enable="Y" is_premium="N" aid="11080" money="0" sharing="0"/>
-	<sound id="Friday_Afternoon.mp3" name="Friday Afternoon" downloadtype="progressive" subtype="tribeofnoise" duration="108317" enable="Y" is_premium="N" aid="11081" money="0" sharing="0"/>
-	<sound id="Going_Far__Hammond_.mp3" name="Going Far (Hammond)" downloadtype="progressive" subtype="tribeofnoise" duration="281133" enable="Y" is_premium="N" aid="11082" money="0" sharing="0"/>
-	<sound id="Gymnopedie_No_I.mp3" name="Gymnopedie No I" downloadtype="progressive" subtype="tribeofnoise" duration="174694" enable="Y" is_premium="N" aid="11083" money="0" sharing="0"/>
-	<sound id="I_believe_in_love.mp3" name="I believe in love" downloadtype="progressive" subtype="tribeofnoise" duration="184542" enable="Y" is_premium="N" aid="11084" money="0" sharing="0"/>
-	<sound id="Inore.mp3" name="Inore" downloadtype="progressive" subtype="tribeofnoise" duration="225038" enable="Y" is_premium="N" aid="11085" money="0" sharing="0"/>
-	<sound id="Les_Solos_Les_Singles.mp3" name="Les Solos Les Singles" downloadtype="progressive" subtype="tribeofnoise" duration="258503" enable="Y" is_premium="N" aid="11086" money="0" sharing="0"/>
-	<sound id="Life_Is_Real.mp3" name="Life Is Real" downloadtype="progressive" subtype="tribeofnoise" duration="173428" enable="Y" is_premium="N" aid="11087" money="0" sharing="0"/>
-	<sound id="Myths_theme_may_09.mp3" name="Myths theme may 09" downloadtype="progressive" subtype="tribeofnoise" duration="285468" enable="Y" is_premium="N" aid="11088" money="0" sharing="0"/>
-	<sound id="No_Place_Like_You.mp3" name="No Place Like You" downloadtype="progressive" subtype="tribeofnoise" duration="250722" enable="Y" is_premium="N" aid="11089" money="0" sharing="0"/>
-	<sound id="Nonkin___instrumental_.mp3" name="Nonkin' (instrumental)" downloadtype="progressive" subtype="tribeofnoise" duration="140837" enable="Y" is_premium="N" aid="11090" money="0" sharing="0"/>
-	<sound id="Now_I_m_Gone.mp3" name="Now I'm Gone" downloadtype="progressive" subtype="tribeofnoise" duration="166951" enable="Y" is_premium="N" aid="11091" money="0" sharing="0"/>
-	<sound id="Open_Your_Eyes.mp3" name="Open Your Eyes" downloadtype="progressive" subtype="tribeofnoise" duration="228067" enable="Y" is_premium="N" aid="11092" money="0" sharing="0"/>
-	<sound id="Please.mp3" name="Please" downloadtype="progressive" subtype="tribeofnoise" duration="221726" enable="Y" is_premium="N" aid="11093" money="0" sharing="0"/>
-	<sound id="Pretty.mp3" name="Pretty" downloadtype="progressive" subtype="tribeofnoise" duration="248342" enable="Y" is_premium="N" aid="11094" money="0" sharing="0"/>
-	<sound id="Run_Out.mp3" name="Run Out" downloadtype="progressive" subtype="tribeofnoise" duration="191140" enable="Y" is_premium="N" aid="11095" money="0" sharing="0"/>
-	<sound id="Ruta_800.mp3" name="Ruta 800" downloadtype="progressive" subtype="tribeofnoise" duration="225285" enable="Y" is_premium="N" aid="11096" money="0" sharing="0"/>
-	<sound id="The_Title.mp3" name="The Title" downloadtype="progressive" subtype="tribeofnoise" duration="64764" enable="Y" is_premium="N" aid="11097" money="0" sharing="0"/>
-	<sound id="Voyage_au_paradis.mp3" name="Voyage au paradis" downloadtype="progressive" subtype="tribeofnoise" duration="164785" enable="Y" is_premium="N" aid="11098" money="0" sharing="0"/>
-	<sound id="What_I_A.mp3" name="What I Am" downloadtype="progressive" subtype="tribeofnoise" duration="160733" enable="Y" is_premium="N" aid="11099" money="0" sharing="0"/>
-	<sound id="abirdcameflying.mp3" name="abirdcameflying" downloadtype="progressive" subtype="tribeofnoise" duration="221048" enable="Y" is_premium="N" aid="11100" money="0" sharing="0"/>
-	<sound id="gone.mp3" name="GONE" downloadtype="progressive" subtype="tribeofnoise" duration="245799" enable="Y" is_premium="N" aid="11101" money="0" sharing="0"/>
-	<sound id="Coffee__tea_or_me.mp3" name="Coffee, tea or me" downloadtype="progressive" subtype="tribeofnoise" duration="248796" enable="Y" is_premium="N" aid="11327" money="0" sharing="0"/>
-	<sound id="Without_me.mp3" name="Without me" downloadtype="progressive" subtype="tribeofnoise" duration="240018" enable="Y" is_premium="N" aid="11328" money="0" sharing="0"/>
-	<sound id="Sunshine_in_the_Rain.mp3" name="Sunshine in the Rain" downloadtype="progressive" subtype="tribeofnoise" duration="181400" enable="Y" is_premium="N" aid="11329" money="0" sharing="0"/>
-	<sound id="afghan_sands.mp3" name="afghan sands" downloadtype="progressive" subtype="tribeofnoise" duration="146030" enable="Y" is_premium="N" aid="11863" money="0" sharing="0"/>
-	<sound id="Are_You_ready.mp3" name="Are You ready" downloadtype="progressive" subtype="tribeofnoise" duration="217762" enable="Y" is_premium="N" aid="11864" money="0" sharing="0"/>
-	<sound id="A_Superman.mp3" name="A Superman" downloadtype="progressive" subtype="tribeofnoise" duration="213896" enable="Y" is_premium="N" aid="11865" money="0" sharing="0"/>
-	<sound id="awakening.mp3" name="awakening" downloadtype="progressive" subtype="tribeofnoise" duration="248195" enable="Y" is_premium="N" aid="11866" money="0" sharing="0"/>
-	<sound id="Do_My_Thing.mp3" name="Do My Thing" downloadtype="progressive" subtype="tribeofnoise" duration="218911" enable="Y" is_premium="N" aid="11867" money="0" sharing="0"/>
-	<sound id="Find_me_somebody_Radio_Edit.mp3" name="Find me somebody Radio Edit" downloadtype="progressive" subtype="tribeofnoise" duration="238138" enable="Y" is_premium="N" aid="11868" money="0" sharing="0"/>
-	<sound id="Give_it_Away.mp3" name="Give it Away" downloadtype="progressive" subtype="tribeofnoise" duration="203134" enable="Y" is_premium="N" aid="11869" money="0" sharing="0"/>
-	<sound id="Le_fleur_du_mal.mp3" name="Le fleur du mal" downloadtype="progressive" subtype="tribeofnoise" duration="258252" enable="Y" is_premium="N" aid="11870" money="0" sharing="0"/>
-	<sound id="mother_earth.mp3" name="mother earth" downloadtype="progressive" subtype="tribeofnoise" duration="88247" enable="Y" is_premium="N" aid="11871" money="0" sharing="0"/>
-	<sound id="No_More_War.mp3" name="No More War" downloadtype="progressive" subtype="tribeofnoise" duration="319378" enable="Y" is_premium="N" aid="11872" money="0" sharing="0"/>
-	<sound id="Prison.mp3" name="Prison" downloadtype="progressive" subtype="tribeofnoise" duration="468564" enable="Y" is_premium="N" aid="11873" money="0" sharing="0"/>
-	<sound id="Surfing_The_Wind.mp3" name="Surfing The Wind" downloadtype="progressive" subtype="tribeofnoise" duration="199816" enable="Y" is_premium="N" aid="11874" money="0" sharing="0"/>
-	<sound id="Termina__Part_II_.mp3" name="Termina (Part II)" downloadtype="progressive" subtype="tribeofnoise" duration="274892" enable="Y" is_premium="N" aid="11875" money="0" sharing="0"/>
-	<sound id="Un_Salto_nel_Blu.mp3" name="Un Salto nel Blu" downloadtype="progressive" subtype="tribeofnoise" duration="187486" enable="Y" is_premium="N" aid="11876" money="0" sharing="0"/>
-	<sound id="We_Are_All_the_Same.mp3" name="We Are All the Same" downloadtype="progressive" subtype="tribeofnoise" duration="293308" enable="Y" is_premium="N" aid="11877" money="0" sharing="0"/>
+	<sound id="Deep_Blue.mp3" name="Deep Blue" downloadtype="progressive" subtype="bgmusic" duration="91799" enable="Y" is_premium="N" aid="11077" money="0" sharing="0"/>
+	<sound id="Deep_Sea_Green.mp3" name="Deep Sea Greeb" downloadtype="progressive" subtype="bgmusic" duration="277308" enable="Y" is_premium="N" aid="11078" money="0" sharing="0"/>
+	<sound id="Doorway.mp3" name="Doorway" downloadtype="progressive" subtype="bgmusic" duration="210621" enable="Y" is_premium="N" aid="11079" money="0" sharing="0"/>
+	<sound id="Everybody_Sleeps.mp3" name="Everybody Sleeps" downloadtype="progressive" subtype="bgmusic" duration="187492" enable="Y" is_premium="N" aid="11080" money="0" sharing="0"/>
+	<sound id="Friday_Afternoon.mp3" name="Friday Afternoon" downloadtype="progressive" subtype="bgmusic" duration="108317" enable="Y" is_premium="N" aid="11081" money="0" sharing="0"/>
+	<sound id="Going_Far__Hammond_.mp3" name="Going Far (Hammond)" downloadtype="progressive" subtype="bgmusic" duration="281133" enable="Y" is_premium="N" aid="11082" money="0" sharing="0"/>
+	<sound id="Gymnopedie_No_I.mp3" name="Gymnopedie No I" downloadtype="progressive" subtype="bgmusic" duration="174694" enable="Y" is_premium="N" aid="11083" money="0" sharing="0"/>
+	<sound id="I_believe_in_love.mp3" name="I believe in love" downloadtype="progressive" subtype="bgmusic" duration="184542" enable="Y" is_premium="N" aid="11084" money="0" sharing="0"/>
+	<sound id="Inore.mp3" name="Inore" downloadtype="progressive" subtype="bgmusic" duration="225038" enable="Y" is_premium="N" aid="11085" money="0" sharing="0"/>
+	<sound id="Les_Solos_Les_Singles.mp3" name="Les Solos Les Singles" downloadtype="progressive" subtype="bgmusic" duration="258503" enable="Y" is_premium="N" aid="11086" money="0" sharing="0"/>
+	<sound id="Life_Is_Real.mp3" name="Life Is Real" downloadtype="progressive" subtype="bgmusic" duration="173428" enable="Y" is_premium="N" aid="11087" money="0" sharing="0"/>
+	<sound id="Myths_theme_may_09.mp3" name="Myths theme may 09" downloadtype="progressive" subtype="bgmusic" duration="285468" enable="Y" is_premium="N" aid="11088" money="0" sharing="0"/>
+	<sound id="No_Place_Like_You.mp3" name="No Place Like You" downloadtype="progressive" subtype="bgmusic" duration="250722" enable="Y" is_premium="N" aid="11089" money="0" sharing="0"/>
+	<sound id="Nonkin___instrumental_.mp3" name="Nonkin' (instrumental)" downloadtype="progressive" subtype="bgmusic" duration="140837" enable="Y" is_premium="N" aid="11090" money="0" sharing="0"/>
+	<sound id="Now_I_m_Gone.mp3" name="Now I'm Gone" downloadtype="progressive" subtype="bgmusic" duration="166951" enable="Y" is_premium="N" aid="11091" money="0" sharing="0"/>
+	<sound id="Open_Your_Eyes.mp3" name="Open Your Eyes" downloadtype="progressive" subtype="bgmusic" duration="228067" enable="Y" is_premium="N" aid="11092" money="0" sharing="0"/>
+	<sound id="Please.mp3" name="Please" downloadtype="progressive" subtype="bgmusic" duration="221726" enable="Y" is_premium="N" aid="11093" money="0" sharing="0"/>
+	<sound id="Pretty.mp3" name="Pretty" downloadtype="progressive" subtype="bgmusic" duration="248342" enable="Y" is_premium="N" aid="11094" money="0" sharing="0"/>
+	<sound id="Run_Out.mp3" name="Run Out" downloadtype="progressive" subtype="bgmusic" duration="191140" enable="Y" is_premium="N" aid="11095" money="0" sharing="0"/>
+	<sound id="Ruta_800.mp3" name="Ruta 800" downloadtype="progressive" subtype="bgmusic" duration="225285" enable="Y" is_premium="N" aid="11096" money="0" sharing="0"/>
+	<sound id="The_Title.mp3" name="The Title" downloadtype="progressive" subtype="bgmusic" duration="64764" enable="Y" is_premium="N" aid="11097" money="0" sharing="0"/>
+	<sound id="Voyage_au_paradis.mp3" name="Voyage au paradis" downloadtype="progressive" subtype="bgmusic" duration="164785" enable="Y" is_premium="N" aid="11098" money="0" sharing="0"/>
+	<sound id="What_I_A.mp3" name="What I Am" downloadtype="progressive" subtype="bgmusic" duration="160733" enable="Y" is_premium="N" aid="11099" money="0" sharing="0"/>
+	<sound id="abirdcameflying.mp3" name="abirdcameflying" downloadtype="progressive" subtype="bgmusic" duration="221048" enable="Y" is_premium="N" aid="11100" money="0" sharing="0"/>
+	<sound id="gone.mp3" name="GONE" downloadtype="progressive" subtype="bgmusic" duration="245799" enable="Y" is_premium="N" aid="11101" money="0" sharing="0"/>
+	<sound id="Coffee__tea_or_me.mp3" name="Coffee, tea or me" downloadtype="progressive" subtype="bgmusic" duration="248796" enable="Y" is_premium="N" aid="11327" money="0" sharing="0"/>
+	<sound id="Without_me.mp3" name="Without me" downloadtype="progressive" subtype="bgmusic" duration="240018" enable="Y" is_premium="N" aid="11328" money="0" sharing="0"/>
+	<sound id="Sunshine_in_the_Rain.mp3" name="Sunshine in the Rain" downloadtype="progressive" subtype="bgmusic" duration="181400" enable="Y" is_premium="N" aid="11329" money="0" sharing="0"/>
+	<sound id="afghan_sands.mp3" name="afghan sands" downloadtype="progressive" subtype="bgmusic" duration="146030" enable="Y" is_premium="N" aid="11863" money="0" sharing="0"/>
+	<sound id="Are_You_ready.mp3" name="Are You ready" downloadtype="progressive" subtype="bgmusic" duration="217762" enable="Y" is_premium="N" aid="11864" money="0" sharing="0"/>
+	<sound id="A_Superman.mp3" name="A Superman" downloadtype="progressive" subtype="bgmusic" duration="213896" enable="Y" is_premium="N" aid="11865" money="0" sharing="0"/>
+	<sound id="awakening.mp3" name="awakening" downloadtype="progressive" subtype="bgmusic" duration="248195" enable="Y" is_premium="N" aid="11866" money="0" sharing="0"/>
+	<sound id="Do_My_Thing.mp3" name="Do My Thing" downloadtype="progressive" subtype="bgmusic" duration="218911" enable="Y" is_premium="N" aid="11867" money="0" sharing="0"/>
+	<sound id="Find_me_somebody_Radio_Edit.mp3" name="Find me somebody Radio Edit" downloadtype="progressive" subtype="bgmusic" duration="238138" enable="Y" is_premium="N" aid="11868" money="0" sharing="0"/>
+	<sound id="Give_it_Away.mp3" name="Give it Away" downloadtype="progressive" subtype="bgmusic" duration="203134" enable="Y" is_premium="N" aid="11869" money="0" sharing="0"/>
+	<sound id="Le_fleur_du_mal.mp3" name="Le fleur du mal" downloadtype="progressive" subtype="bgmusic" duration="258252" enable="Y" is_premium="N" aid="11870" money="0" sharing="0"/>
+	<sound id="mother_earth.mp3" name="mother earth" downloadtype="progressive" subtype="bgmusic" duration="88247" enable="Y" is_premium="N" aid="11871" money="0" sharing="0"/>
+	<sound id="No_More_War.mp3" name="No More War" downloadtype="progressive" subtype="bgmusic" duration="319378" enable="Y" is_premium="N" aid="11872" money="0" sharing="0"/>
+	<sound id="Prison.mp3" name="Prison" downloadtype="progressive" subtype="bgmusic" duration="468564" enable="Y" is_premium="N" aid="11873" money="0" sharing="0"/>
+	<sound id="Surfing_The_Wind.mp3" name="Surfing The Wind" downloadtype="progressive" subtype="bgmusic" duration="199816" enable="Y" is_premium="N" aid="11874" money="0" sharing="0"/>
+	<sound id="Termina__Part_II_.mp3" name="Termina (Part II)" downloadtype="progressive" subtype="bgmusic" duration="274892" enable="Y" is_premium="N" aid="11875" money="0" sharing="0"/>
+	<sound id="Un_Salto_nel_Blu.mp3" name="Un Salto nel Blu" downloadtype="progressive" subtype="bgmusic" duration="187486" enable="Y" is_premium="N" aid="11876" money="0" sharing="0"/>
+	<sound id="We_Are_All_the_Same.mp3" name="We Are All the Same" downloadtype="progressive" subtype="bgmusic" duration="293308" enable="Y" is_premium="N" aid="11877" money="0" sharing="0"/>
 	<sound id="adeste_fideles__modern_.mp3" name="Adeste Fideles (modern)" downloadtype="progressive" subtype="bgmusic" duration="143156" enable="Y" is_premium="N" aid="14977" money="0" sharing="0">
 		<tag>Christmas</tag>
 		<tag>gentle</tag>
