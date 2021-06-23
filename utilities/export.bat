@@ -590,7 +590,6 @@ echo:
 echo ^(1^) MPEG-4 Video File ^(H.264/AAC^) ^(Default^)
 echo ^(2^) Audio/Video Interleave ^(x264/LAME^)
 echo ^(3^) WebM Video File ^(VPX9/Vorbis^)
-echo ^(4^) Windows Media Video ^(WMV2/WMAV2^)
 echo:
 :formatretry
 set /p FORMATTYPE= Option: 
@@ -612,12 +611,6 @@ if "%FORMATTYPE%"=="3" (
 	set FILESUFFIX=webm
 	set VCODEC=libvpx
 	set ACODEC=libvorbis
-	goto outputcheck
-)
-if "%FORMATTYPE%"=="4" (
-	set FILESUFFIX=wmv
-	set VCODEC=wmv2
-	set ACODEC=wmav2
 	goto outputcheck
 )
 echo Invalid option. Please try again. && goto formatretry
