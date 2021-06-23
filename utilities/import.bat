@@ -3,18 +3,16 @@ title Wrapper: Offline Import Script
 :: Author: benson#0411
 :: License: MIT
 
-:restart
-
 :: Initialize (stop command spam, clean screen, make variables work, set to UTF-8)
 @echo off && cls
 SETLOCAL ENABLEDELAYEDEXPANSION
 
 :: Move to base folder, and make sure it worked (otherwise things would go horribly wrong)
-pushd "%~dp0.."
+pushd "%~dp0"
 if !errorlevel! NEQ 0 goto error_location
-pushd ...
+pushd ..
 if !errorlevel! NEQ 0 goto error_location
-if not exist utilities ( goto error_location )
+if not exist utilities\import.bat ( goto error_location )
 if not exist wrapper ( goto error_location )
 if not exist server ( goto error_location )
 popd utilities
@@ -74,6 +72,7 @@ if !folderfilled!==n (
 	:reaskforfile
 	echo:
 	set /p CFDIR= File:
+	set CFDIR=%cfdir:"=%
 	if /i "!CFDIR!"=="gotodir" start "" "!themefolder!" & goto end
 	if /i "!CFDIR!"=="0" goto end
 	if not exist "!CFDIR!" echo That doesn't seem to exist. & goto reaskforfile
@@ -131,11 +130,6 @@ for %%a in (import_these\*) do (
 
 	:: Ask category
 	if !cftype!=="img" (
-	    echo NOTE: If you're importing a backdrop, the
-		echo backdrop MUST be 550x310. If you go any
-        echo larger, it will zoom into the top-right
-        echo corner. We have no idea why it does that.
-        echo:
 		echo Press 1 to import !cfname! as a backdrop.
 		echo Press 2 to import !cfname! as a prop.
 		:imgaskretry
@@ -184,8 +178,8 @@ for %%a in (import_these\*) do (
 
 	echo Moving file to theme...
 	echo:
-	copy /y "%%a" "!themefolder!!cfid!" >nul
-	pushd "!themefolder!"
+	copy /y %%a !themefolder!!cfid! >nul
+	pushd !themefolder!
 	if !cftype!=="img" (
 		if not exist !cfsubtype! ( md !cfsubtype! )
 		pushd !cfsubtype!
@@ -245,7 +239,7 @@ for %%a in (import_these\*) do (
 	)
 	:linereached
 	:: Print our string and a blank line for the next one
-	echo 	!cfxml!>> temp.xml
+	echo !cfxml!>> temp.xml
 	echo:>> temp.xml
 	:: Print the last of theme.xml to our temp file
 	more +!cfline! theme.xml>> temp.xml
@@ -259,7 +253,7 @@ for %%a in (import_these\*) do (
 	echo:
 	
 	:: Copy theme.xml to _THEMES folder
-	copy /y "!themefolder!\theme.xml" "wrapper\_THEMES\import.xml"
+	copy /y !themefolder!theme.xml wrapper\_THEMES\import.xml
 
 	:: Move file out of the way so we don't repeat it
 	pushd import_these
@@ -279,22 +273,10 @@ for %%a in (import_these\*) do (
 
 :: Zip the XML because it demands that we do so
 echo Zipping XML...
-call 7za.exe a "!themefolder!\import.zip" "!themefolder!\theme.xml" >nul
+7za.exe a "!themefolder!\import.zip" "!themefolder!\theme.xml" >nul
 
 :end
 endlocal
-echo:
-echo Importing process complete.
-echo:
-echo Press Enter if you want to import another file. Otherwise, press 0.
-set /p RESTART= Response:
-echo:
-if "%RESTART%"=="0" goto goodbye
-) else (
-goto restart
-
-
-:goodbye
 if "%SUBSCRIPT%"=="" (
 	echo Closing...
 	pause & exit
