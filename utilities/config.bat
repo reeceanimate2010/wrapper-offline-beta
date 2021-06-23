@@ -3,7 +3,7 @@ if "%SUBSCRIPT%"=="" ( start notepad.exe "%CD%\%~nx0" & exit )
 endlocal
 
 :: verbose
-set VERBOSEWRAPPER=n
+set VERBOSEWRAPPER=y
 
 :: skip check depends
 set SKIPCHECKDEPENDS=n
