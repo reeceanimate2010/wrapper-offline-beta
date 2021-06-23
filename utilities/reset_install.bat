@@ -279,4 +279,4 @@ if "%SUBSCRIPT%"=="" (
 
 
 
-:: holy crap that took forever to fix for 1.3.1+ ~ MJ
+:: holy crap that took forever to fix for 1.3.0+ ~ MJ
