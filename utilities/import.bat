@@ -286,5 +286,5 @@ if "%SUBSCRIPT%"=="" (
 	echo Closing...
 	pause & exit
 ) else (
-	exit /b
+	exit
 )
