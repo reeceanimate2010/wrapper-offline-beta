@@ -3,18 +3,16 @@ title Wrapper: Offline Import Script
 :: Author: benson#0411
 :: License: MIT
 
-:restart
-
 :: Initialize (stop command spam, clean screen, make variables work, set to UTF-8)
 @echo off && cls
 SETLOCAL ENABLEDELAYEDEXPANSION
 
 :: Move to base folder, and make sure it worked (otherwise things would go horribly wrong)
-pushd "%~dp0.."
+pushd "%~dp0"
 if !errorlevel! NEQ 0 goto error_location
-pushd ...
+pushd ..
 if !errorlevel! NEQ 0 goto error_location
-if not exist utilities ( goto error_location )
+if not exist utilities\import.bat ( goto error_location )
 if not exist wrapper ( goto error_location )
 if not exist server ( goto error_location )
 popd utilities
@@ -74,6 +72,7 @@ if !folderfilled!==n (
 	:reaskforfile
 	echo:
 	set /p CFDIR= File:
+	set CFDIR=%cfdir:"=%
 	if /i "!CFDIR!"=="gotodir" start "" "!themefolder!" & goto end
 	if /i "!CFDIR!"=="0" goto end
 	if not exist "!CFDIR!" echo That doesn't seem to exist. & goto reaskforfile
@@ -283,18 +282,6 @@ call 7za.exe a "!themefolder!\import.zip" "!themefolder!\theme.xml" >nul
 
 :end
 endlocal
-echo:
-echo Importing process complete.
-echo:
-echo Press Enter if you want to import another file. Otherwise, press 0.
-set /p RESTART= Response:
-echo:
-if "%RESTART%"=="0" goto goodbye
-) else (
-goto restart
-
-
-:goodbye
 if "%SUBSCRIPT%"=="" (
 	echo Closing...
 	pause & exit
