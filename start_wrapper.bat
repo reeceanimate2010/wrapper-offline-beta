@@ -241,7 +241,7 @@ if !NEEDTHEDEPENDERS!==y (
 		set "line=%%b"
 		>>!tmpcfg! echo(!line:~1!
 		set /a count+=1
-		if !count! GEQ 14 goto linereached
+		if !count! GEQ 9 goto linereached
 	)
 	:linereached
 	:: Overwrite the original setting
