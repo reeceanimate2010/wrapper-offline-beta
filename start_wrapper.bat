@@ -813,7 +813,7 @@ goto wrapperidle
 
 :start_importer
 echo Opening the importer...
-start "" "utilities\AssetImporter.exe"
+start "" "utilities\import.bat"
 goto wrapperidle
 
 :start_exporter
