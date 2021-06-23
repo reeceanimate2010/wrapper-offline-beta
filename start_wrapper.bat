@@ -81,7 +81,7 @@ if not exist "utilities\checks" md utilities\checks
 :: Welcome, Director Ford!
 echo Wrapper: Offline
 echo A project from VisualPlugin adapted by GoTest334 and the Wrapper: Offline team
-echo Version !WRAPPER_VER!, build !WRAPPER_BLD!
+echo Version !WRAPPER_VER!
 echo:
 
 :: Confirm measurements to proceed.
@@ -1068,9 +1068,7 @@ echo setlocal>> utilities\metadata.bat
 echo if "%%SUBSCRIPT%%"=="" ( start notepad.exe "%%CD%%\%%~nx0" ^& exit )>> utilities\metadata.bat
 echo endlocal>> utilities\metadata.bat
 echo:>> utilities\metadata.bat
-echo :: Version number and build number>> utilities\metadata.bat
 echo set WRAPPER_VER=1.3.0>> utilities\metadata.bat
-echo set WRAPPER_BLD=10>> utilities\metadata.bat
 echo:>> utilities\metadata.bat
 set NOMETA=n
 goto returnfrommetacopy
