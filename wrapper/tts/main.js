@@ -389,17 +389,33 @@ module.exports = (voiceName, text) => {
 						},
 					},
 					(r) => {
-					var buffers = [];
-					r.on("data", (d) => buffers.push(d));
-					r.on("end", () => {
-						const html = Buffer.concat(buffers);
-						const beg = html.indexOf("/tmp/");
-						const end = html.indexOf(".mp3", beg) + 4;
-						const sub = html.subarray(beg, end).toString();
-						const loc = `https://readloud.net${sub}`;
-						get(loc).then(res).catch(rej);
-					});
-					r.on("error", rej);
+						var buffers = [];
+						r.on("data", (d) => buffers.push(d));
+						r.on("end", () => {
+							const html = Buffer.concat(buffers);
+							const beg = html.indexOf("/tmp/");
+							const end = html.indexOf(".mp3", beg) + 4;
+							const sub = html.subarray(beg, end).toString();
+							const loc = `https://readloud.net${sub}`;
+
+							https.get(
+								{
+									host: "readloud.net",
+									path: sub,
+									headers: {
+										"Content-Type": "application/x-www-form-urlencoded",
+										"User-Agent":
+											"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.101 Safari/537.36",
+									},
+								},
+								(r) => {
+									buffers = [];
+									r.on("data", (d) => buffers.push(d));
+									r.on("end", () => res(Buffer.concat(buffers)));
+								}
+							);
+						});
+						r.on("error", rej);
 					}
 				);
 				req.end(
