@@ -3,7 +3,6 @@ const formidable = require("formidable");
 const asset = require("./main");
 const http = require("http");
 const fs = require("fs");
-const fUtil = require("../misc/file");
 
 /**
  * @param {http.IncomingMessage} req
@@ -20,35 +19,25 @@ module.exports = function (req, res, url) {
 				switch (mode) {
 					case "vo":
 						mode = "voiceover";
-						ext = "mp3";
 						break;
 					case "se":
 						mode = "soundeffect";
-						ext = "mp3";
 						break;
 					case "mu":
 						mode = "music";
-						ext = "mp3";
-						break;
-					case "prop":
-						mode = "prop";
-						ext = "png";
-						break;
-					case "bg":
-						mode = "bg";
-						ext = "jpg";
 						break;
 				}
+
 				var path = files.import.path;
 				var buffer = fs.readFileSync(path);
-				asset.save(buffer, mId, mode, ext)
-				res.end(`0${mode}-${fUtil.padZero(fUtil.getNextFileId(mode + "-", "." + ext), 7)}.${ext}`);
+				asset.save(buffer, mId, mode, ext);
 				fs.unlinkSync(path);
 				delete buffer;
+				res.end();
 			});
 			return true;
 		case "/goapi/saveSound/":
-			loadPost(req, res).then(([data]) => {
+			loadPost(req, res).then(([data, mId]) => {
 				var bytes = Buffer.from(data.bytes, "base64");
 				res.end("0" + asset.save(bytes, mId, "voiceover", "ogg"));
 			});
